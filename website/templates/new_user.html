@@ -1,0 +1,22 @@
+<style>
+  label, label > span { display: block; }
+  label { margin: 15px 0; }
+</style>
+
+<a href="/users_list">Back</a>
+
+<form action="/create_user" method="post">
+  <label>
+    <span>Name</span>
+    <input type="text" placeholder="Enter Name" name="username" required>
+  </label>
+  <label>
+    <span>Email</span>
+    <input type="text" placeholder="Enter Email" name="email" required>
+  </label>
+  <label>
+    <span>password</span>
+    <input type="password" placeholder="Enter Password" name="password" required>
+  </label>
+  <button>Submit</button>
+</form>

@@ -1,0 +1,26 @@
+{% if users %}
+<style>pre{white-space:wrap}</style>
+<div>Logged in as <strong>{{current_user}}</strong> (<a href="{{ url_for('.logout') }}">Log Out</a>)</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th> 
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+      <tr>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td> 
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<br><a href="{{ url_for('.add_user') }}">Add User</a>
+
+{% else %}
+  <center><h4>No Users exists</h4></center>
+{% endif %}
