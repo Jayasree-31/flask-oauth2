@@ -9,7 +9,8 @@
 ## Create Database and run the development server:
 
   > flask initdb
-  >  flask run
+  
+  > flask run
 
 ## To connect Database in shell:
   - from app import create_app
